@@ -1,0 +1,25 @@
+2026-10-10 14:08:31,623 - __main__ - INFO - === INICIANDO PROCESO ETL AIRBNB ===
+2026-10-10 14:08:31,628 - src.extraccion - INFO - Conexión exitosa a MongoDB en localhost:27017, BD: airbnb_bogota
+2026-10-10 14:08:32,870 - src.extraccion - INFO - Colección 'listings' extraída. Registros: 19187
+2026-10-10 14:08:37,106 - src.extraccion - INFO - Colección 'reviews' extraída. Registros: 527731
+2026-10-10 14:09:19,134 - src.extraccion - INFO - Colección 'calendar' extraída. Registros: 7003255
+2026-10-10 14:09:20,433 - src.extraccion - INFO - Conexión a MongoDB cerrada.
+2026-10-10 14:09:21,858 - src.transformacion - INFO - === Iniciando proceso de Transformación ===
+2026-10-10 14:09:21,859 - src.transformacion - INFO - Iniciando limpieza de nulos y duplicados.
+2026-10-10 14:09:22,595 - src.transformacion - INFO - [Listings] Registros iniciales: 19187, finales: 19187
+2026-10-10 14:09:23,713 - src.transformacion - INFO - [Reviews] Registros iniciales: 527731, finales: 527731
+2026-10-10 14:09:33,322 - src.transformacion - INFO - [Calendar] Registros iniciales: 7003255, finales: 7003255
+2026-10-10 14:09:33,323 - src.transformacion - INFO - Normalizando campos de precio...
+2026-10-10 14:09:33,443 - src.transformacion - INFO - Convirtiendo fechas y derivando variables...
+2026-10-10 14:09:37,655 - src.transformacion - INFO - Precios categorizados.
+2026-10-10 14:09:38,401 - src.transformacion - INFO - Campos anidados expandidos.
+2026-10-10 14:09:38,402 - src.transformacion - INFO - === Transformación completada con éxito ===
+2026-10-10 14:09:38,417 - src.carga - INFO - Conectado a SQLite en: C:\Users\juane\.gemini\antigravity\scratch\proyecto_etl_airbnb\data\airbnb_analitica.db
+2026-10-10 14:09:38,655 - src.carga - ERROR - Error al cargar en SQLite 'listings': 'utf-8' codec can't encode characters in position 370-371: surrogates not allowed
+2026-10-10 14:09:53,160 - src.carga - ERROR - Error al exportar a Excel listings_transformado.xlsx: 'utf-8' codec can't encode characters in position 370-371: surrogates not allowed
+2026-10-10 14:09:54,841 - src.carga - INFO - Tabla 'reviews' cargada en SQLite. Registros: 527731
+2026-10-10 14:10:46,147 - src.carga - INFO - Datos exportados a Excel en: C:\Users\juane\.gemini\antigravity\scratch\proyecto_etl_airbnb\data\reviews_transformado.xlsx
+2026-10-10 14:11:07,127 - src.carga - INFO - Tabla 'calendar' cargada en SQLite. Registros: 7003255
+2026-10-10 14:11:07,149 - src.carga - ERROR - Error al exportar a Excel calendar_transformado.xlsx: This sheet is too large! Your sheet size is: 7003255, 10 Max sheet size is: 1048576, 16384
+2026-10-10 14:11:07,161 - src.carga - INFO - Conexión a SQLite cerrada.
+2026-10-10 14:11:07,163 - __main__ - INFO - === PROCESO ETL FINALIZADO CON ÉXITO ===

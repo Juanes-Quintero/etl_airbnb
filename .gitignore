@@ -1,0 +1,23 @@
+# Entornos virtuales
+venv/
+env/
+ENV/
+.env
+
+# Datos generados por el proceso ETL (SQLite y Excel)
+# NOTA: airbnb_analitica.db pesa ~774 MB y GitHub rechaza archivos mayores a 100 MB.
+data/
+*.db
+*.sqlite
+*.xlsx
+*.csv
+*.csv.gz
+
+# Checkpoints y temporales de Jupyter
+.ipynb_checkpoints/
+anaconda_projects/
+
+# Caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
